@@ -120,6 +120,11 @@ int main()
     cout << "// Writing ended" << endl;
 
     /*
+    do something changes for Git #1
+    */
+
+
+    /*
     int arsize = 4;
 
     Window *Arr = new Window[arsize]{
