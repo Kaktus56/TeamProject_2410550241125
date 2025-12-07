@@ -29,9 +29,17 @@ void fileToVector(string path)
     */
 }
 
-void vetorConsoleOutput(vector<string> vec)
+void vectorConsoleOutput(vector<string> vec)
 {
+    cout << "This vector have:" << endl;
+    cout << "Vector size: " << vec.size() << endl;
+    cout << "--------------------------" << endl;
+    for (size_t i = 0; i < vec.size(); i++)
+    {
+        cout << "[" << setw(3) << i << "] " << vec[i] << endl;
+    }
 
+    cout << "--------------------------" << endl;
 }
 
 void vectorToFile(vector<string> vec)
@@ -42,9 +50,12 @@ void vectorToFile(vector<string> vec)
 int main()
 {
     vector<string> someStr;
-
+    someStr.push_back("Hello world!");
+    someStr.push_back("This is test string 1");
+    someStr.push_back("This is test string 2");
+    someStr.push_back("This is test string 3");
     fileToVector("data.txt");
-    vetorConsoleOutput(someStr);
+    vectorConsoleOutput(someStr);
     vectorToFile(someStr);
 
     return 0;
