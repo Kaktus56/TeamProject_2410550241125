@@ -39,16 +39,20 @@ void vectorConsoleOutput(vector<string> vec)
 
 void vectorToFile(vector<string> vec)
 {
+    const string filename = "output.txt";
+    ofstream outFile(filename);
 
-}
+    if (!outFile.is_open()) {
+        cerr « "ОШИБКА: не удалось открыть файл '" « filename « "' для записи!" « endl;
+        return;
+    }
 
-int main()
-{
-    vector<string> someStr;
+    int count = 0;
+    for (const auto& line : vec) {
+        outFile « line « endl;
+        count++;
+    }
 
-    fileToVector("data.txt", &someStr);
-    vetorConsoleOutput(someStr);
-    vectorToFile(someStr);
-
-    return 0;
+    outFile.close();
+    cout « "✓ Успешно записано " « count « " строк в файл '" « filename « "'" « endl;
 }
