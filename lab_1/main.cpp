@@ -24,9 +24,17 @@ int fileToVector(string path, vector<string> *someVec)
     return 0;
 }
 
-void vetorConsoleOutput(vector<string> vec)
+void vectorConsoleOutput(vector<string> vec)
 {
+    cout << "This vector have:" << endl;
+    cout << "Vector size: " << vec.size() << endl;
+    cout << "--------------------------" << endl;
+    for (size_t i = 0; i < vec.size(); i++)
+    {
+        cout << "[" << setw(3) << i << "] " << vec[i] << endl;
+    }
 
+    cout << "--------------------------" << endl;
 }
 
 void vectorToFile(vector<string> vec)
