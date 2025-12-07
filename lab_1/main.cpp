@@ -43,16 +43,25 @@ void vectorToFile(vector<string> vec)
     ofstream outFile(filename);
 
     if (!outFile.is_open()) {
-        cerr « "ОШИБКА: не удалось открыть файл '" « filename « "' для записи!" « endl;
+        cerr << "ERROR: can't open file " << filename << "for data output" << endl;
         return;
     }
 
     int count = 0;
     for (const auto& line : vec) {
-        outFile « line « endl;
+        outFile << line << endl;
         count++;
     }
 
     outFile.close();
-    cout « "✓ Успешно записано " « count « " строк в файл '" « filename « "'" « endl;
+    cout << "succesfull output excepted strings in file " << filename << endl;
+}
+
+int main()
+{
+    vector<string> someStr;
+    fileToVector("data.txt", &someStr);
+    vectorConsoleOutput(someStr);
+    vectorToFile(someStr);
+    return 0;
 }
