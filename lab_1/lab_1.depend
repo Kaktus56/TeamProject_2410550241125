@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1762601569 source:c:\cprojects\лаб1\lab_1\main.cpp
+1762601569 source:c:\cprojects\Г«Е•ГЎ1\lab_1\main.cpp
 	<iostream>
 	<fstream>
 	<sstream>
 	<vector>
 	<iomanip>
 
-1765118162 source:c:\labs_git\teamproject_2410550241125\lab_1\main.cpp
+1765116239 source:f:\gitproject_ri241055\lab_1\main.cpp
 	<iostream>
 	<fstream>
 	<sstream>
