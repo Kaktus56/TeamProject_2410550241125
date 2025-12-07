@@ -7,9 +7,8 @@
 using namespace std;
 
 
-void fileToVector(string path)
+int fileToVector(string path, vector<string> *someVec)
 {
-    /*
     ifstream file(path); // Открыть файл для чтения
     if (!file.is_open()) {
         wcout << L"Ошибка открытия файла!" << endl;
@@ -17,16 +16,12 @@ void fileToVector(string path)
     }
 
     string line;
-    string parametr;
 
     while (getline(file, line)) { // Чтение строки до '\n'
-        Window current;
-        parametr = "";
-        stringstream sline(line);
-        struct_vector.push_back(line);
+        someVec->push_back(line);
     }
     file.close(); // Закрыть файл
-    */
+    return 0;
 }
 
 void vetorConsoleOutput(vector<string> vec)
@@ -43,7 +38,7 @@ int main()
 {
     vector<string> someStr;
 
-    fileToVector("data.txt");
+    fileToVector("data.txt", &someStr);
     vetorConsoleOutput(someStr);
     vectorToFile(someStr);
 

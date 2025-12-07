@@ -1,4 +1,4 @@
-0000-0000-0000 5 4 false gray
-0001-3333-2222 16 9 true pink
-9178-6666-3333 20 15 true black
-7466-4976-2342 11 11 false white
+some text some text some text
+some num 00 some num 01 some num 10 some num 11
+i d k i d k i d k i d k i d k i d k
+do be is to do; to do is to be; to be to be do;
